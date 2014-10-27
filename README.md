@@ -21,6 +21,7 @@ docker-mongodb
     
     sudo docker inspect rs1_srv1
     sudo docker inspect rs1_srv2
+    sudo docker inspect rs1_srv3
 
 	on rs1_srv1
 	 mongo --port
@@ -33,11 +34,15 @@ docker-mongodb
 	 rs.reconfig(cfg)
 	 rs.status()
     
+    sudo docker inspect rs2_srv1
+    sudo docker inspect rs2_srv2
+    sudo docker inspect rs2_srv3
+    
     on rs2_srv1
 	 mongo --port
 	 rs.initiate()
 	 rs.add("<IP_of_rs2_srv2>:27017")
-	 rs.add("<IP_of_rs2_srv3>:27017")
+	 rs.add("<IP_of_rs2_srv3>:27m017")
 	 rs.status()
 	 cfg = rs.conf()
 	 cfg.members[0].host = "<IP_of_rs2_srv1>:27017"
