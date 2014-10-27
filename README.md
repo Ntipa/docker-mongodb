@@ -6,9 +6,8 @@ docker-mongodb
 ### To build:
 
 	Spostarsi nella directory e lanciare il comando
-    sudo docker build -t tornabene/mongodb mongodb
-    sudo docker build -t tornabene/mongos mongos
-  
+    sudo docker build -t tornabene/docker-mongodb .
+	sudo docker build -t tornabene/docker-mongodb-sharding .
 ### To run localy:
 
     sudo docker pull tornabene/docker-mongodb
