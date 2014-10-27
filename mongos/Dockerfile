@@ -1,4 +1,4 @@
-FROM dev24/mongodb:latest
+FROM tornabene/mongodb:latest
 MAINTAINER Tindaro Tornabene <tindaro.tornabene@gmail.com>
 
 EXPOSE 27017
