@@ -10,7 +10,8 @@ docker-mongodb
 ### To run:
 
     sudo docker pull tornabene/docker-mongodb
-    sudo docker run  -p 27017:27017 --name testmongo   -d tornabene/docker-mongodb   --noprealloc --smallfiles
+    sudo mkdir -p /opt/ntipa/mongodb_data
+    sudo docker run  -p 27017:27017 --name testmongo   -d  -v  /opt/ntipa/mongodb_data:/data/db   tornabene/docker-mongodb   --noprealloc --smallfiles
     
     sudo docker run  -P --name rs1_srv1  -d tornabene/docker-mongodb --replSet rs1  --noprealloc --smallfiles
     sudo docker run  -P --name rs1_srv2  -d tornabene/docker-mongodb --replSet rs1  --noprealloc --smallfiles
